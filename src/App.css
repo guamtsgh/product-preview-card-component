@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root {
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --dark-blue:hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--grayish-blue);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--cream);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 2rem 1rem;
+}
+
+#mobile-pic {
+  width: 100%;
+
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+}
+
+#desktop-pic {
+  display: none;
+}
+
+#container {
+  background-color: var(--white);
+
+  border-radius: 0.5rem;
+}
+
+#details {
+  padding: 1.6rem 2rem;
+}
+
+#type {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+#name {
+  font-family: "Fraunces", serif;
+  line-height: 2.4rem;
+  font-size: xx-large;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+#description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6rem;
+}
+
+#price {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 1.5rem;
+}
+
+#discount {
+  color: var(--dark-cyan);
+  font-size: xx-large;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+#original {
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-cyan);
+  padding: 0.8rem;
+
+  border: none;
+  border-radius: 0.5rem;
+}
+
+button img {
+  width: 5%;
+}
+
+button p {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+button:active {
+  background-color: var(--dark-blue);
+}
+
+
+@media only screen and (min-width: 636px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #container {
+    display: flex;
+    height: 30rem;
+    width: 40rem;
+  }
+
+  #mobile-pic {
+    display: none;
+  }
+
+  #desktop-pic {
+    display: flex;
+    height: 30rem;
+
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  #details {
+    padding: 2rem;
+  }
+
+  button {
+    gap: 0.8rem;
+  }
+
+  button img {
+    width: 8%;
+  }
+
+  button p {
+    font-size: 0.9rem;
+  }
+}
